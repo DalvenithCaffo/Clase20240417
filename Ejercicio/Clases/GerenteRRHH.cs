@@ -6,32 +6,33 @@ using System.Threading.Tasks;
 using Ejercicio.Abstracts;
 using Ejercicio.Interfaces;
 using Ejercicio.Statics;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Ejercicio.Clases
 {
-     class Gerente:EmpleadoBase, ISueldoBonificable, IDescuentoImpuesto
+    
+    class GerenteRRHH: EmpleadoBase, ISueldoBonificable, IDescuentoImpuesto
     {
 
-        public override double SueldoBase => 10000;
-        public double Bonificacion {  get; set; }
-        public double Descuento {  get; set; }
+        public override double SueldoBase => 20000;
+        public double Bonificacion { get; set; }
+        public double Descuento { get; set; }
 
         public void CalcularBonificacion()
         {
-            Bonificacion = Constantes.Bonificacion1;
+            Bonificacion = Constantes.Bonificacion2;
         }
 
         public void DescontarSueldo()
         {
-            Descuento = SueldoBase * Constantes.PorCentajeDescuento2;
+            Descuento = SueldoBase * Constantes.PorCentajeDescuento1;
         }
-        public override  void CalcularSueldo() {
+        public override void CalcularSueldo()
+        {
             SueldoNeto = SueldoBase + Bonificacion - Descuento;
         }
         public override string ObtenerTipoEmpleado()
         {
-            return "Tipo Gerente";
+            return "Tipo Gerente RRHH";
         }
         public override void MostrarDetalles()
         {
@@ -40,6 +41,5 @@ namespace Ejercicio.Clases
             Console.WriteLine($"Descuento: {Descuento}");
             /*Console.WriteLine($"Empleado:{Nombre}, ID Empleado:{IdEmpleado}, Pusto:{Puesto}, Sueldo: {SueldoNeto}, Bonificacion {Bonificacion}");*/
         }
-       
     }
 }
