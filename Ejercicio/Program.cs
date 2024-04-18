@@ -39,6 +39,7 @@ do {
 
     switch (opcion)
     {   case 1:
+
             Console.WriteLine(" **** REGISTRO EMPLEADO **** ");
             Console.WriteLine();
             Console.WriteLine("**** tipos de empleado ****");
@@ -55,7 +56,7 @@ do {
             idEmpleado = Convert.ToInt32(Console.ReadLine());
 
             
-            switch (tipoEmpleado)
+            switch (tipoEmpleado.ToUpper())
             {
                 case "A":
                     puestoEmpleado = "Consultor Externo";
