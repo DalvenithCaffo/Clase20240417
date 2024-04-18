@@ -8,6 +8,6 @@ namespace Ejercicio.Interfaces
 {
      interface IDescuentoImpuesto
     {
-        public void DescontarSueldo();
+        public void CalcularDescuento();
     }
 }

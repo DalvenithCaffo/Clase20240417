@@ -22,7 +22,7 @@ namespace Ejercicio.Clases
             Bonificacion = Constantes.Bonificacion1;
         }
 
-        public void DescontarSueldo()
+        public void CalcularDescuento()
         {
             Descuento = SueldoBase * Constantes.PorCentajeDescuento2;
         }
